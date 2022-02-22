@@ -27,7 +27,7 @@ services:
 
   emqx:
     container_name: emqx
-    image: emqx/emqx:4.2.3
+    image: emqx/emqx:4.2.4
     restart: always
     ports:
       - 18083:18083
@@ -46,7 +46,7 @@ services:
     links:
       - mongo
     extra_hosts:
-      - "localhost:192.168.10.23"
+      - "localhost:172.35.1.157"
 
 
     environment: 
@@ -76,7 +76,7 @@ services:
       EMQX_AUTH__MONGO__PASSWORD: "devpassword"
       EMQX_AUTH__MONGO__AUTH_SOURCE: admin
 
-      EMQX_AUTH__MONGO__DATABASE: "iotgl"
+      EMQX_AUTH__MONGO__DATABASE: "ioticos_god_level"
       EMQX_AUTH__MONGO__AUTH_QUERY__COLLECTION: "emqxauthrules"
 
       EMQX_AUTH__MONGO__SUPER_QUERY__COLLECTION: "emqxauthrules"
@@ -96,12 +96,8 @@ services:
 
       EMQX_LOADED_PLUGINS: "emqx_recon,emqx_retainer,emqx_management,emqx_dashboard, emqx_auth_mongo"
 
-
-
       EMQX_LISTENER__TCP__EXTERNAL__MAX_CONNECTIONS: 1000
-
-
-      
+ 
 
 
 
