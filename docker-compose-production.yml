@@ -64,7 +64,7 @@ services:
       - mongo
 
     extra_hosts:
-      - "localhost:192.168.0.6"
+      - "localhost:172.31.47.202"
 
     environment:
       EMQX_NAME: IoT Tecnologias
