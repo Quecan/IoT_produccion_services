@@ -67,7 +67,7 @@ services:
       - "localhost:172.31.47.202"
 
     environment:
-      EMQX_NAME: IoT Tecnologias
+      EMQX_NAME: IoT_Tecnologias
       EMQX_HOST: 127.0.0.1
 
       TZ: "${TZ}"
