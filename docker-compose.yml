@@ -7,8 +7,7 @@ version: "3.8"
 #    name: foo-emqx-etc
 #  vol-emqx-log:
 #    name: foo-emqx-log
-#
-#
+
 services:
 
   mongo:
