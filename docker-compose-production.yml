@@ -1,13 +1,12 @@
 version: "3.8"
-#
+
 volumes:
   vol-emqx-data:
     name: foo-emqx-data
-#  vol-emqx-etc:
-#    name: foo-emqx-etc
+
   vol-emqx-log:
     name: foo-emqx-log
-#
+
 
 
 services:
@@ -15,6 +14,7 @@ services:
   node:
     container_name: node
     image: "node:14"
+    restart: always
 
     working_dir: /home/node/app
     volumes:
@@ -28,12 +28,15 @@ services:
       - emqx
       - mongo
       
-    command: sh -c "npm run build && npm run start"
+    command: sh -c "echo 'delaying 30 seconds' && sleep 30 && npm run start"
     #command: sh -c "npm install"
 
   mongo:
     container_name: mongo
     image: mongo:4.4
+    restart: always	
+    logging:	
+     driver: "none"
  
     environment:
       TZ: "${TZ}"
@@ -47,6 +50,7 @@ services:
   emqx:
     container_name: emqx
     image: emqx/emqx:4.2.3
+    restart: always
     
     ports:
       - 18083:18083
@@ -57,15 +61,15 @@ services:
 
     volumes:
       - vol-emqx-data:/opt/emqx/data
-    #   - vol-emqx-etc:/opt/emqx/etc
+  
       - vol-emqx-log:/opt/emqx/log
-    #
+    
 
     links:
       - mongo
 
     extra_hosts:
-      - "localhost:172.31.47.202"
+      - "localhost:18.229.79.249"
 
     environment:
       EMQX_NAME: IoT_Tecnologias
