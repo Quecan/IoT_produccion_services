@@ -283,7 +283,7 @@ sudo mv ioticos_god_level_services services
 cd services
 
 ## ______________________________
-## INSALL INIT
+## INSALL INIiT
 filename='.env'
 
 
