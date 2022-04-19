@@ -69,7 +69,7 @@ services:
       - mongo
 
     extra_hosts:
-      - "localhost:18.229.79.249"
+      - "localhost:54.94.104.227"
 
     environment:
       EMQX_NAME: IoT_Tecnologias
