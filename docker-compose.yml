@@ -43,7 +43,7 @@ services:
       - mongo
 
     extra_hosts:
-      - "localhost:54.94.104.227"
+      - "localhost:172.32.0.241"
 
     environment:
       EMQX_NAME: IoTsoluciones
