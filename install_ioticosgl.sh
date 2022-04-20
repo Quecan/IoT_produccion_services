@@ -277,7 +277,7 @@ sudo rm install_docker.sh
 sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo git clone https://github.com/Quecan/IoT_produccion_services.git
-sudo mv ioticos_god_level_services services
+sudo mv sudo mv IoT_produccion_services services
 
 
 cd services
@@ -304,7 +304,7 @@ sudo sh -c " echo 'EMQX_DEFAULT_APPLICATION_SECRET=${EMQX_DEFAULT_APPLICATION_SE
 
 
 sudo git clone https://github.com/Quecan/IoT_produccion_app.git
-sudo mv ioticos_god_level_app  app
+sudo mv IoT_produccion_app  app
 
 cd app
 
